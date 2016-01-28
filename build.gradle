@@ -14,7 +14,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 group = 'xyz.lexteam'
-version = '1.0.0'
+version = '1.0.0-SNAPSHOT'
 description = "Guide - Lexteam Common Libraries for Java 1.8."
 ext.url = 'http://www.lexteam.xyz/'
 
