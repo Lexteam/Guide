@@ -24,10 +24,17 @@
 package xyz.lexteam.guide.collect;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public final class Maps {
 
+    private Maps() {}
+
     public static HashMap newHashMap() {
         return new HashMap();
+    }
+
+    public static HashMap newHashMap(Map map) {
+        return new HashMap(map);
     }
 }

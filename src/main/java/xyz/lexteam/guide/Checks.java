@@ -21,20 +21,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package xyz.lexteam.guide.collect;
+package xyz.lexteam.guide;
 
-import java.util.HashSet;
-import java.util.Set;
+public final class Checks {
 
-public final class Sets {
+    private Checks() {}
 
-    private Sets() {}
-
-    public static HashSet newHashSet() {
-        return new HashSet();
-    }
-
-    public static HashSet newHashSet(Set set) {
-        return new HashSet(set);
+    public static <T> T checkNotNull(T object) {
+        if (object == null) {
+            throw new NullPointerException();
+        }
+        return object;
     }
 }
