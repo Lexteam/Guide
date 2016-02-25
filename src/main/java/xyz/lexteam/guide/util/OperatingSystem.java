@@ -23,6 +23,7 @@
  */
 package xyz.lexteam.guide.util;
 
+import java.io.File;
 import java.util.function.Predicate;
 
 /**
@@ -53,16 +54,16 @@ public enum OperatingSystem implements Predicate<String> {
         return false;
     }
 
-    public String getDataFolder() {
+    public File getDataFolder() {
         switch (this) {
             case OSX:
-                return System.getProperty("user.home") + "/Library/Application Support";
+                return new File(System.getProperty("user.home") + "/Library/Application Support");
             case WINDOWS:
-                return System.getenv("APPDATA");
+                return new File(System.getenv("APPDATA"));
             case LINUX:
             case UNKNOWN:
             default:
-                return System.getProperty("user.home");
+                return new File(System.getProperty("user.home"));
         }
     }
 
